@@ -7,14 +7,13 @@ import deleteSong from "../queries/deleteSong";
 function SongList({ data, mutate }) {
   const onSongDelete = ({ id, title }) => {
     console.log("Deleting", title, "with ID", id);
+    //todo: fix delete - it deletes song at top of list regardless of id passed in
     mutate({ variables: { id } }).then(() => data.refetch());
     //use refetch when you need to reload data associated with the current
     // component. Use refetchQueries option for refetching data used in
     // other components
-    //can also use the apolloClient 'dataIdFromObject' option to refresh data
+    //can also use the apolloClient 'dataI-dFromObject' option to refresh data
     // instead of refetch to reduce total request #
-    // ***** NOTE: mutate just deletes the song at the top of the list
-    //             regardless of the id passed in
   };
 
   const renderSongs = () => {

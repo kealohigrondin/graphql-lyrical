@@ -10,7 +10,7 @@ import SongDetail from "./components/SongDetail";
 
 const client = new ApolloClient({
   dataIdFromObject: o => o.id //o is short for object
-  //takes every piece of data fetched from graphql and passes it thru this
+  //takes every piece of data fetched from graphql and passes it thru this.
   //helps identify every piece of data in apollo store by id
 });
 

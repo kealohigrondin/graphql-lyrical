@@ -17,6 +17,7 @@ class LyricCreate extends React.Component {
           songId: this.props.songId,
           content: this.state.content,
         },
+        //could add optimistic update here to increase UI response speed
       })
       .then(() => {
         this.setState({ content: "" });
