@@ -8,9 +8,9 @@ function SongList({ data, mutate }) {
   const onSongDelete = ({ id, title }) => {
     console.log("Deleting", title, "with ID", id);
     mutate({ variables: { id } }).then(() => data.refetch());
-    //use refetch when you need to reload data for associated with the
-    // current component. Use refetchQueries option for refetching data
-    // used in other components
+    //use refetch when you need to reload data associated with the current
+    // component. Use refetchQueries option for refetching data used in
+    // other components
     // ***** NOTE: mutate just deletes the song at the top of the list
     //             regardless of the id passed in
   };
