@@ -26,7 +26,7 @@ function SongList({ data, mutate }) {
           className="collection-item"
           style={{ height: "60px" }}
         >
-          {song.title}
+          <Link to={`/song/${song.id}`}>{song.title}</Link>
           <button className="btn right" onClick={() => onSongDelete(song)}>
             <i className="material-icons">delete</i>
           </button>

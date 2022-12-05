@@ -1,10 +1,12 @@
 import React from "react";
-import SongList from "./SongList";
+import { Link } from "react-router";
 
 function App({ children }) {
   return (
     <div className="container">
-      <h3>Lyrical</h3>
+      <Link to="/">
+        <h3>Lyrical</h3>
+      </Link>
       {children}
     </div>
   );

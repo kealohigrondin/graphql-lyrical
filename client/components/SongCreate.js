@@ -28,8 +28,9 @@ class SongCreate extends React.Component {
   render() {
     return (
       <div className="container">
-        <h3>Lyrical</h3>
-
+        <Link to="/">
+          <h3>Lyrical</h3>
+        </Link>
         <div className="container">
           <Link to="/" className="btn red right">
             Back
